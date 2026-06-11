@@ -1,0 +1,501 @@
+/* Variáveis de cor e sombra usadas para manter o padrão visual do site em um só lugar. */
+:root {
+  --blue: #233f90;
+  --blue-soft: #6572a7;
+  --green: #43a847;
+  --green-dark: #32883a;
+  --green-light: #57bb5b;
+  --amo-pink: #d94f93;
+  --amo-pink-dark: #c94386;
+  --white: #ffffff;
+  --line: #e5e3e7;
+  --hero-top: #fff4f6;
+  --hero-bottom: #ffffff;
+  --card-text: #626a95;
+  --shadow: 0 13px 28px rgba(39, 45, 84, 0.16);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  padding-top: 56px;
+  color: var(--blue);
+  background: var(--white);
+  font-family: "Inter", Arial, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Cabeçalho fixo no topo, com fundo translúcido para acompanhar a rolagem da página. */
+.site-header {
+  height: 56px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid rgba(229, 227, 231, 0.62);
+  background: rgba(255, 255, 255, 0.76);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 8px 24px rgba(35, 63, 144, 0.04);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  color: var(--blue);
+}
+
+/* Tamanho da logo usada no cabeçalho. */
+.brand-logo {
+  width: 34px;
+  height: auto;
+  display: block;
+}
+
+.brand-text {
+  line-height: 1;
+}
+
+/* Primeira área da página, com fundo claro e conteúdo centralizado. */
+.hero {
+  min-height: 410px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 42px 20px 34px;
+  background:
+    radial-gradient(circle at 50% 15%, rgba(255, 255, 255, 0.96), transparent 255px),
+    linear-gradient(180deg, var(--hero-top) 0%, #fff7f8 58%, var(--hero-bottom) 100%);
+}
+
+.hero-content {
+  width: min(100%, 760px);
+  text-align: center;
+}
+
+h1 {
+  display: grid;
+  gap: 2px;
+  color: var(--blue);
+  font-size: clamp(1.55rem, 4vw, 2.4rem);
+  font-weight: 800;
+  line-height: 1.04;
+  letter-spacing: 0;
+}
+
+h1 strong {
+  font: inherit;
+}
+
+.brand-title-line {
+  display: block;
+  white-space: nowrap;
+  font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+}
+
+.hero-subtitle {
+  max-width: 470px;
+  margin: 16px auto 36px;
+  color: var(--blue-soft);
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+/* Linha da pergunta que aparece antes dos cards de escolha. */
+.question {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 18px;
+  color: #3a417c;
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.question-icon {
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ec63a5, var(--amo-pink-dark));
+  box-shadow: 0 5px 12px rgba(217, 79, 147, 0.24);
+  font-size: 0.85rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+/* Cards com os dois caminhos principais de atendimento. */
+.choice-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(250px, 1fr));
+  gap: 18px;
+  width: min(100%, 625px);
+  margin: 0 auto;
+}
+
+.choice-card {
+  min-height: 128px;
+  display: flex;
+  flex-direction: column;
+  padding: 19px 20px 18px;
+  text-align: left;
+  border: 1px solid rgba(222, 220, 226, 0.92);
+  border-radius: 15px;
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.choice-card h2 {
+  margin-bottom: 8px;
+  color: #33427f;
+  font-size: 0.85rem;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.choice-card p {
+  flex: 1;
+  margin-bottom: 13px;
+  color: var(--card-text);
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.42;
+}
+
+.choice-button {
+  min-height: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  padding: 10px 16px;
+  text-align: center;
+  color: var(--white);
+  border-radius: 8px;
+  background: linear-gradient(180deg, var(--green-light), var(--green));
+  box-shadow: 0 5px 12px rgba(51, 139, 58, 0.24);
+  font-size: 0.82rem;
+  font-weight: 800;
+  line-height: 1.2;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+
+.choice-button:hover,
+.choice-button:focus-visible {
+  transform: translateY(-1px);
+  background: linear-gradient(180deg, #65c469, var(--green-dark));
+  box-shadow: 0 8px 15px rgba(51, 139, 58, 0.28);
+}
+
+.choice-button:focus-visible {
+  outline: 3px solid rgba(67, 168, 71, 0.26);
+  outline-offset: 3px;
+}
+
+/* Seta visual para indicar que existe mais conteúdo abaixo. */
+.scroll-cue {
+  width: 14px;
+  height: 14px;
+  display: block;
+  margin: 28px auto 0;
+  border-right: 2px solid #aeb3d0;
+  border-bottom: 2px solid #aeb3d0;
+  transform: rotate(45deg);
+}
+
+/* Bloco da foto que aparece logo depois da primeira chamada. */
+.visual-section {
+  display: flex;
+  justify-content: center;
+  padding: 18px 20px 34px;
+  background: var(--white);
+}
+
+.team-photo {
+  width: min(100%, 768px);
+  min-height: 300px;
+  border-radius: 16px;
+  background:
+    linear-gradient(180deg, rgba(35, 63, 144, 0.03), rgba(35, 63, 144, 0.08)),
+    url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1400&q=80");
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0 16px 34px rgba(30, 38, 72, 0.14);
+}
+
+/* Área de perguntas frequentes com itens que abrem e fecham ao clicar. */
+.faq-section {
+  display: flex;
+  justify-content: center;
+  padding: 0 20px 58px;
+  background: var(--white);
+}
+
+.faq-box {
+  width: min(100%, 768px);
+  overflow: hidden;
+  border: 1px solid #d9dde7;
+  border-radius: 4px;
+  background: var(--white);
+}
+
+.faq-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 23px 30px;
+  color: var(--white);
+  background: #276fc4;
+}
+
+.faq-header h2 {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 6px;
+  color: var(--white);
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.faq-header h2 span {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.faq-header p {
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.faq-header-icon {
+  flex: 0 0 auto;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.faq-list {
+  padding: 8px;
+}
+
+.faq-item {
+  border: 1px solid #d9dde7;
+  background: #fbfcfe;
+}
+
+.faq-item + .faq-item {
+  border-top: 0;
+}
+
+.faq-item summary {
+  position: relative;
+  display: block;
+  padding: 28px 54px 28px 28px;
+  color: #005fd0;
+  cursor: pointer;
+  font-size: 0.98rem;
+  font-weight: 800;
+  line-height: 1.35;
+  list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "⌄";
+  position: absolute;
+  top: 26px;
+  right: 28px;
+  color: #8d9bb0;
+  font-size: 1rem;
+  font-weight: 800;
+  transition: transform 0.18s ease, color 0.18s ease;
+}
+
+.faq-item[open] summary {
+  padding-bottom: 12px;
+}
+
+.faq-item[open] summary::after {
+  color: #005fd0;
+  transform: rotate(180deg);
+}
+
+.faq-item p {
+  padding: 0 54px 28px 28px;
+  color: #384860;
+  font-size: 0.96rem;
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+/* Rodapé com fundo rosa, logo e dados da empresa. */
+.company-footer {
+  display: flex;
+  justify-content: center;
+  padding: 16px 20px 14px;
+  color: var(--white);
+  background: var(--amo-pink);
+}
+
+.footer-content {
+  width: min(100%, 760px);
+  text-align: center;
+}
+
+.footer-logo {
+  width: 190px;
+  max-width: 70vw;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;
+  /* A logo é exibida em branco para ter contraste com o fundo rosa. */
+  filter: brightness(0) invert(1) drop-shadow(0 8px 14px rgba(116, 32, 78, 0.2));
+}
+
+.company-footer h2 {
+  margin-bottom: 8px;
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.company-footer p {
+  margin-top: 5px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.footer-divider {
+  width: min(100%, 720px);
+  height: 1px;
+  margin: 14px auto 10px;
+  background: rgba(255, 255, 255, 0.24);
+}
+
+.company-footer .copyright {
+  margin-top: 0;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.7rem;
+}
+
+/* Ajustes para telas menores, principalmente celulares. */
+@media (max-width: 680px) {
+  .hero {
+    min-height: auto;
+    padding: 40px 18px 32px;
+  }
+
+  h1 {
+    font-size: clamp(1.85rem, 9vw, 2.55rem);
+  }
+
+  .brand-title-line {
+    font-size: clamp(1rem, 4.9vw, 1.55rem);
+  }
+
+  .hero-subtitle {
+    margin-bottom: 30px;
+    font-size: 0.9rem;
+  }
+
+  .question {
+    font-size: 0.98rem;
+  }
+
+  .choice-grid {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+  }
+
+  .choice-card {
+    padding: 18px;
+  }
+
+  .team-photo {
+    min-height: 230px;
+    border-radius: 14px;
+  }
+
+  .faq-section {
+    padding: 0 18px 42px;
+  }
+
+  .faq-header {
+    padding: 20px 22px;
+  }
+
+  .faq-header h2 {
+    font-size: 1.08rem;
+  }
+
+  .faq-header p {
+    font-size: 0.9rem;
+  }
+
+  .faq-item summary {
+    padding: 22px 46px 22px 22px;
+    font-size: 0.9rem;
+  }
+
+  .faq-item summary::after {
+    top: 21px;
+    right: 22px;
+  }
+
+  .faq-item p {
+    padding: 0 46px 22px 22px;
+    font-size: 0.88rem;
+  }
+
+  .company-footer {
+    padding: 14px 18px 12px;
+  }
+
+  .footer-logo {
+    width: 170px;
+  }
+}
+
+@media (max-width: 390px) {
+  .brand-text {
+    display: none;
+  }
+
+  .choice-card p {
+    min-height: auto;
+  }
+}
