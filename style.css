@@ -218,13 +218,24 @@ h1 strong {
 
 /* Seta visual para indicar que existe mais conteúdo abaixo. */
 .scroll-cue {
-  width: 14px;
-  height: 14px;
-  display: block;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
   margin: 28px auto 0;
+  color: #7b84ad;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+.scroll-cue::after {
+  content: "";
+  width: 9px;
+  height: 9px;
   border-right: 2px solid #aeb3d0;
   border-bottom: 2px solid #aeb3d0;
-  transform: rotate(45deg);
+  transform: rotate(45deg) translateY(-2px);
 }
 
 /* Bloco da foto que aparece logo depois da primeira chamada. */
@@ -241,7 +252,7 @@ h1 strong {
   border-radius: 16px;
   background:
     linear-gradient(180deg, rgba(35, 63, 144, 0.03), rgba(35, 63, 144, 0.08)),
-    url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1400&q=80");
+    url('../imagens/Imagem 2 gerada.png');
   background-position: center;
   background-size: cover;
   box-shadow: 0 16px 34px rgba(30, 38, 72, 0.14);
@@ -251,11 +262,12 @@ h1 strong {
 .faq-section {
   display: flex;
   justify-content: center;
-  padding: 0 20px 58px;
+  padding: 72px 20px 58px;
   background: var(--white);
 }
 
 .faq-box {
+  scroll-margin-top: 86px;
   width: min(100%, 768px);
   overflow: hidden;
   border: 1px solid #d9dde7;
@@ -266,8 +278,7 @@ h1 strong {
 .faq-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 16px;
+  justify-content: flex-start;
   padding: 23px 30px;
   color: var(--white);
   background: #276fc4;
@@ -284,22 +295,11 @@ h1 strong {
   line-height: 1.2;
 }
 
-.faq-header h2 span {
-  font-size: 0.9rem;
-  font-weight: 700;
-}
-
 .faq-header p {
   color: var(--white);
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.35;
-}
-
-.faq-header-icon {
-  flex: 0 0 auto;
-  font-size: 1rem;
-  font-weight: 800;
 }
 
 .faq-list {
@@ -318,12 +318,8 @@ h1 strong {
 .faq-item summary {
   position: relative;
   display: block;
-  padding: 28px 54px 28px 28px;
-  color: #005fd0;
+  padding: 28px 190px 28px 28px;
   cursor: pointer;
-  font-size: 0.98rem;
-  font-weight: 800;
-  line-height: 1.35;
   list-style: none;
 }
 
@@ -332,26 +328,73 @@ h1 strong {
 }
 
 .faq-item summary::after {
-  content: "⌄";
+  content: "Clique para expandir ↓";
   position: absolute;
   top: 26px;
   right: 28px;
   color: #8d9bb0;
-  font-size: 1rem;
+  font-size: 0.75rem;
   font-weight: 800;
+  line-height: 1;
+  text-align: right;
+  white-space: nowrap;
   transition: transform 0.18s ease, color 0.18s ease;
 }
 
 .faq-item[open] summary {
-  padding-bottom: 12px;
+  padding-bottom: 4px;
 }
 
 .faq-item[open] summary::after {
+  content: "Recolher ↑";
   color: #005fd0;
-  transform: rotate(180deg);
 }
 
-.faq-item p {
+.faq-question {
+  display: block;
+  color: #005fd0;
+  font-size: 0.98rem;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.faq-preview {
+  min-height: calc(1.42em * 2);
+  display: -webkit-box;
+  overflow: hidden;
+  margin-top: 14px;
+  color: #384860;
+  font-size: 0.96rem;
+  font-weight: 500;
+  line-height: 1.42;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.faq-item[open] .faq-preview {
+  min-height: auto;
+  display: block;
+  overflow: visible;
+  -webkit-line-clamp: unset;
+}
+
+.faq-answer {
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: height 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.55s ease,
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: height, opacity, transform;
+}
+
+.faq-item[open] .faq-answer {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.faq-answer p {
   padding: 0 54px 28px 28px;
   color: #384860;
   font-size: 0.96rem;
@@ -451,7 +494,11 @@ h1 strong {
   }
 
   .faq-section {
-    padding: 0 18px 42px;
+    padding: 56px 18px 42px;
+  }
+
+  .faq-box {
+    scroll-margin-top: 78px;
   }
 
   .faq-header {
@@ -467,17 +514,32 @@ h1 strong {
   }
 
   .faq-item summary {
-    padding: 22px 46px 22px 22px;
-    font-size: 0.9rem;
+    padding: 22px 22px 52px;
   }
 
   .faq-item summary::after {
-    top: 21px;
-    right: 22px;
+    top: auto;
+    right: auto;
+    bottom: 22px;
+    left: 22px;
+    font-size: 0.72rem;
+    text-align: left;
   }
 
-  .faq-item p {
-    padding: 0 46px 22px 22px;
+  .faq-item[open] summary {
+    padding-bottom: 40px;
+  }
+
+  .faq-answer p {
+    padding: 0 22px 22px;
+    font-size: 0.88rem;
+  }
+
+  .faq-question {
+    font-size: 0.9rem;
+  }
+
+  .faq-preview {
     font-size: 0.88rem;
   }
 

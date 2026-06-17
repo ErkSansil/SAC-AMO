@@ -7,13 +7,15 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../imagens/logo-amo.png">
+  <link rel="apple-touch-icon" href="../imagens/logo-amo.png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- Cabeçalho fixo com a marca e o nome da empresa. -->
   <header class="site-header">
     <a class="brand" href="#" aria-label="AMO Gestão em Processos Administrativos">
-      <img class="brand-logo" src="logo-amo.png" alt="" aria-hidden="true">
+      <img class="brand-logo" src="../imagens/logo-amo.png" alt="" aria-hidden="true">
       <span class="brand-text">AMO Gestão em Processos Administrativos</span>
     </a>
   </header>
@@ -24,7 +26,6 @@
       <div class="hero-content">
         <h1 id="main-title">
           <span>Canal de Atendimento</span>
-          <strong class="brand-title-line">AMO - Auxílio Maternidade Oficial</strong>
         </h1>
 
         <p class="hero-subtitle">
@@ -51,7 +52,7 @@
           </article>
         </div>
 
-        <a class="scroll-cue" href="#atendimento" aria-label="Ver mais sobre atendimento"></a>
+        <a class="scroll-cue" href="#faq" aria-label="Ir para o FAQ">FAQ</a>
       </div>
     </section>
 
@@ -62,39 +63,91 @@
 
     <!-- Perguntas frequentes em formato suspenso; as respostas podem ser editadas diretamente nos parágrafos. -->
     <section class="faq-section" aria-labelledby="faq-title">
-      <div class="faq-box">
+      <div class="faq-box" id="faq">
         <header class="faq-header">
           <div>
-            <h2 id="faq-title">Precisa de ajuda rápida? <span aria-hidden="true"></span></h2>
+            <h2 id="faq-title">Precisa de ajuda rápida?</h2>
             <p>Veja se temos a resposta para seu problema</p>
           </div>
-          <span class="faq-header-icon" aria-hidden="true">⌃</span>
         </header>
 
         <div class="faq-list">
           <details class="faq-item">
-            <summary>A AMO é confiável?</summary>
-            <p>Adicione o texto aqui.</p>
+            <summary>
+              <span class="faq-question">A AMO é confiável?</span>
+              <span class="faq-preview">Sim! E mais do que isso: a AMO entende o momento que você está vivendo. Sabemos que a chegada de um filho transforma tudo.</span>
+            </summary>
+            <div class="faq-answer">
+              <p>É uma fase que exige cuidado, atenção e segurança. E é justamente por isso que nosso trabalho vai além do técnico, ele é humano.
+
+Hoje, a AMO já conta com mais de 50 mil avaliações no Google, com nota média de 4,9 de 5,0, refletindo a confiança de milhares de mães que já passaram por aqui. São mais de 2 mil mães atendidas todos os dias, com um serviço 100% online, seguro e pensado para facilitar sua vida.
+
+Nosso atendimento é especializado e humanizado, porque entendemos que por trás de cada processo existe uma mãe que precisa de apoio, não de burocracia.
+
+Além disso, trabalhamos com um índice de 99% de aprovação nos benefícios concedidos, resultado de uma análise cuidadosa e de uma equipe que sabe exatamente o que está fazendo.
+
+Aqui, você não é só mais um atendimento.</p>
+            </div>
           </details>
 
           <details class="faq-item">
-            <summary>Como funciona o auxílio maternidade?</summary>
-            <p>Adicione o texto aqui.</p>
+            <summary>
+              <span class="faq-question">Como funciona o auxílio maternidade?</span>
+              <span class="faq-preview">O Auxílio-Maternidade é um direito garantido pela Previdência Social para assegurar tranquilidade financeira nesse momento tão importante da sua vida.</span>
+            </summary>
+            <div class="faq-answer">
+              <p>Se você deu à luz ou adotou uma criança, pode ter direito a receber esse benefício enquanto se afasta do trabalho para cuidar do seu bebê com total dedicação.
+
+Esse apoio existe justamente para que você não precise se preocupar com renda durante esse período, permitindo focar 100% no que realmente importa: o bem-estar e os primeiros cuidados com seu filho.
+
+Toda mulher que contribui para o INSS pode ter acesso ao Auxílio-Maternidade, conforme as regras vigentes. Durante o recebimento, é importante lembrar que não é permitido exercer atividade remunerada.
+
+Além disso, a legislação também protege a família em situações delicadas: em caso de falecimento da segurada ou do segurado, o benefício pode ser transferido ao cônjuge ou companheiro, desde que ele também seja segurado do INSS.</p>
+            </div>
           </details>
 
           <details class="faq-item">
-            <summary>Qual o valor do benefício?</summary>
-            <p>Adicione o texto aqui.</p>
+            <summary>
+              <span class="faq-question">Qual o valor do benefício?</span>
+              <span class="faq-preview">O valor do Salário-Maternidade é calculado com base na média dos seus últimos 12 salários de contribuição, garantindo um benefício justo.</span>
+            </summary>
+            <div class="faq-answer">
+              <p>De acordo com sua renda, para trabalhadoras com carteira assinada, o pagamento corresponde ao salário integral recebido antes do afastamento.
+
+Além disso, existe uma segurança importante: o benefício nunca será inferior ao salário mínimo vigente. Dependendo do seu histórico de contribuições, os valores podem variar — podendo chegar de R$ 6.000,00 até R$ 15.900,00.
+
+Ou seja, pode ser um valor significativo que muitas pessoas deixam de receber por falta de orientação correta.
+
+Para saber exatamente quanto você tem direito a receber, o ideal é fazer uma análise do seu caso com um especialista. A equipe da AMO está pronta para te orientar e garantir que você receba cada real que é seu por direito.</p>
+            </div>
           </details>
 
           <details class="faq-item">
-            <summary>Quem paga esse benefício?</summary>
-            <p>Adicione o texto aqui.</p>
+            <summary>
+              <span class="faq-question">Quem paga esse benefício?</span>
+              <span class="faq-preview">Para trabalhadoras com carteira assinada, o pagamento é feito pela empresa, que continua pagando o salário durante o afastamento.</span>
+            </summary>
+            <div class="faq-answer">
+              <p>Depois, a empresa realiza a compensação junto ao INSS.
+
+Já nos casos de trabalhadoras autônomas, contribuintes individuais ou domésticas, o pagamento é feito diretamente pelo INSS. Nesses casos, é fundamental uma análise correta para garantir que tudo seja solicitado da forma certa, e é aqui que a AMO entra.
+
+A equipe da AMO realiza uma avaliação completa do seu caso e te orienta em todas as etapas, garantindo que você receba seu benefício sem erros, sem atrasos e com o valor correto.
+
+Além disso, se a empresa participa do Programa Empresa Cidadã e concede a prorrogação de mais 2 meses de licença, esses valores extras são pagos diretamente pelo empregador, com compensação no imposto de renda.</p>
+            </div>
           </details>
 
           <details class="faq-item">
-            <summary>É realmente necessário enviar minha senha do GOV.BR e documentos para a assessoria?</summary>
-            <p>Adicione o texto aqui.</p>
+            <summary>
+              <span class="faq-question">É realmente necessário enviar minha senha do GOV.BR e documentos para a assessoria?</span>
+              <span class="faq-preview">Sim. O acesso ao GOV.BR e aos seus documentos é necessário para que a AMO possa protocolar e acompanhar o processo.</span>
+            </summary>
+            <div class="faq-answer">
+              <p>Também permite responder rapidamente a eventuais exigências do INSS.
+
+Todas as informações são tratadas com total responsabilidade, sigilo e em conformidade com a proteção de dados. Esse acesso garante mais agilidade, evita erros e aumenta significativamente as chances de aprovação do seu benefício.</p>
+            </div>
           </details>
         </div>
       </div>
@@ -104,7 +157,7 @@
   <!-- Rodapé com os dados básicos da empresa e a logo em destaque. -->
   <footer class="company-footer">
     <div class="footer-content">
-      <img class="footer-logo" src="logo-amo-horizontal.png" alt="Auxílio Maternidade Oficial">
+      <img class="footer-logo" src="../imagens/logo-amo-horizontal.png" alt="Auxílio Maternidade Oficial">
 
       <p>CNPJ: 58.520.730/0001-01</p>
       <p>AMO Gestão em Processos Administrativos Ltda.</p>
@@ -115,5 +168,115 @@
       <p class="copyright">© 2026 AMO. Todos os direitos reservados.</p>
     </div>
   </footer>
+
+  <script>
+    const easeInOutCubic = (progress) => {
+      if (progress < 0.5) {
+        return 4 * progress * progress * progress;
+      }
+
+      return 1 - Math.pow(-2 * progress + 2, 3) / 2;
+    };
+
+    document.querySelectorAll('a[href^="#"]').forEach((link) => {
+      link.addEventListener("click", (event) => {
+        const target = document.querySelector(link.getAttribute("href"));
+
+        if (!target) {
+          return;
+        }
+
+        event.preventDefault();
+
+        const startPosition = window.scrollY;
+        const headerOffset = 86;
+        const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerOffset;
+        const distance = targetPosition - startPosition;
+        const duration = 1300;
+        let startTime = null;
+
+        const animateScroll = (currentTime) => {
+          if (!startTime) {
+            startTime = currentTime;
+          }
+
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          const easedProgress = easeInOutCubic(progress);
+
+          window.scrollTo(0, startPosition + distance * easedProgress);
+
+          if (progress < 1) {
+            requestAnimationFrame(animateScroll);
+          }
+        };
+
+        requestAnimationFrame(animateScroll);
+      });
+    });
+
+    document.querySelectorAll(".faq-item").forEach((item) => {
+      const summary = item.querySelector("summary");
+      const answer = item.querySelector(".faq-answer");
+
+      if (!summary || !answer) {
+        return;
+      }
+
+      answer.style.height = "0px";
+
+      summary.addEventListener("click", (event) => {
+        event.preventDefault();
+
+        if (item.open) {
+          closeFaqItem(item, answer);
+        } else {
+          openFaqItem(item, answer);
+        }
+      });
+    });
+
+    function openFaqItem(item, answer) {
+      item.open = true;
+      answer.style.height = "0px";
+      answer.style.opacity = "0";
+      answer.style.transform = "translateY(-6px)";
+
+      requestAnimationFrame(() => {
+        answer.style.height = `${answer.scrollHeight}px`;
+        answer.style.opacity = "1";
+        answer.style.transform = "translateY(0)";
+      });
+
+      answer.addEventListener("transitionend", function handleOpen(event) {
+        if (event.propertyName !== "height") {
+          return;
+        }
+
+        answer.style.height = "auto";
+        answer.removeEventListener("transitionend", handleOpen);
+      });
+    }
+
+    function closeFaqItem(item, answer) {
+      answer.style.height = `${answer.scrollHeight}px`;
+      answer.offsetHeight;
+
+      requestAnimationFrame(() => {
+        answer.style.height = "0px";
+        answer.style.opacity = "0";
+        answer.style.transform = "translateY(-6px)";
+      });
+
+      answer.addEventListener("transitionend", function handleClose(event) {
+        if (event.propertyName !== "height") {
+          return;
+        }
+
+        item.open = false;
+        answer.removeEventListener("transitionend", handleClose);
+      });
+    }
+  </script>
 </body>
 </html>
