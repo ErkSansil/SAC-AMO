@@ -252,7 +252,7 @@ h1 strong {
   border-radius: 16px;
   background:
     linear-gradient(180deg, rgba(35, 63, 144, 0.03), rgba(35, 63, 144, 0.08)),
-    url('../imagens/Imagem 2 gerada.png');
+    url("imagens/Imagem 2 gerada.png");
   background-position: center;
   background-size: cover;
   box-shadow: 0 16px 34px rgba(30, 38, 72, 0.14);
